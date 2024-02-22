@@ -6,7 +6,7 @@
 /*   By: eerazo-c <eerazo-c@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 13:47:57 by eerazo-c          #+#    #+#             */
-/*   Updated: 2024/02/19 18:20:26 by eerazo-c         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:42:47 by eerazo-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../Inc/printf/ft_printf.h"
@@ -40,7 +40,7 @@ int	main(void)
 	int	pid;
 
 	pid = getpid();
-	ft_printf("Waiting receive signal\nPID = %i\n", getpid());
+	ft_printf("\e[0;31mWaiting receive signal\n\e[0;37mPID = %i\n", getpid());
 	while (1)
 	{
 		signal(SIGUSR1, receive_signal);
